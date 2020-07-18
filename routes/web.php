@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/todo", "HomeController@index");
+Route::get("/", "HomeController@index");
