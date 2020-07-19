@@ -26,7 +26,7 @@
             <tr>
                 <td>{{$item->id}}</td>
                 <td>{{$item->detail}}</td>
-                <td>{{$item->category_id}}</td>
+                <td>{{$item->category->name}}</td>
                 <td>@if($item->status == 1)completed @else incomplete @endif</td>
                 <td>
                     <a href="#" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> edit</a>
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 </div>
- {{$posts->links() }}
+ {{$posts->links()}}
 @endsection
