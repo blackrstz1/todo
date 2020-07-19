@@ -16,6 +16,11 @@
         <header><a href="/" >หน้าแรก</a> | <a href="/create">เพิ่มรายการ</a> | <a href="/login">เข้าสู่ระบบ</a></header>
         <hr>
         <div>
+            @if(auth()->check())
+            สวัสดี, {{auth()->user()->name}} <a href="/logout"> ออกจากระบบ </a>
+            @else
+            สวัสดี, บุคคลทั่วไป โปรด <a href="/login"> เข้าสู่ระบบ </a>
+            @endif
            @yield ("content")
         </div>
         <hr>
